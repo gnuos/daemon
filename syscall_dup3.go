@@ -1,7 +1,8 @@
-//go:build linux && (riscv64 || arm64)
-// +build linux
+//go:build (riscv64 || arm64) && linux
 // +build riscv64 arm64
+// +build linux
 
+// Package daemon
 package daemon
 
 import "syscall"

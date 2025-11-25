@@ -1,3 +1,4 @@
+// Package daemon
 package daemon
 
 import (

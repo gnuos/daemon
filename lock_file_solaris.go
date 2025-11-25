@@ -1,6 +1,7 @@
 //go:build solaris
 // +build solaris
 
+// Package daemon
 package daemon
 
 import (

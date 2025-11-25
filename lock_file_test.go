@@ -2,7 +2,6 @@ package daemon
 
 import (
 	"fmt"
-	"io/ioutil"
 	"os"
 	"runtime"
 	"testing"
@@ -25,7 +24,7 @@ func TestCreatePidFile(test *testing.T) {
 	}
 	defer lock.Remove()
 
-	data, err := ioutil.ReadFile(filename)
+	data, err := os.ReadFile(filename)
 	if err != nil {
 		test.Fatal(err)
 	}

@@ -1,13 +1,14 @@
-//go:build (!linux || !arm64) && (!linux || !riscv64) && !windows && go1.7
+//go:build (!linux || !arm64) && !windows
 // +build !linux !arm64
-// +build !linux !riscv64
 // +build !windows
-// +build go1.7
 
+// Package daemon
 package daemon
 
-import "golang.org/x/sys/unix"
+import (
+	"syscall"
+)
 
 func syscallDup(oldfd int, newfd int) (err error) {
-	return unix.Dup2(oldfd, newfd)
+	return syscall.Dup2(oldfd, newfd)
 }

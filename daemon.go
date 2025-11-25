@@ -1,3 +1,4 @@
+// Package daemon
 package daemon
 
 import (
@@ -9,16 +10,16 @@ var errNotSupported = errors.New("daemon: Non-POSIX OS is not supported")
 
 // Mark of daemon process - system environment variable _GO_DAEMON=1
 const (
-	MARK_NAME  = "_GO_DAEMON"
-	MARK_VALUE = "1"
+	MarkName  = "_GO_DAEMON"
+	MarkValue = "1"
 )
 
-// Default file permissions for log and pid files.
-const FILE_PERM = os.FileMode(0640)
+// FilePerm Default file permissions for log and pid files.
+const FilePerm = os.FileMode(0640)
 
 // WasReborn returns true in child process (daemon) and false in parent process.
 func WasReborn() bool {
-	return os.Getenv(MARK_NAME) == MARK_VALUE
+	return os.Getenv(MarkName) == MarkValue
 }
 
 // Reborn runs second copy of current process in the given context.

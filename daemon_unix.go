@@ -1,6 +1,7 @@
 //go:build darwin || dragonfly || freebsd || linux || netbsd || openbsd || plan9 || solaris
 // +build darwin dragonfly freebsd linux netbsd openbsd plan9 solaris
 
+// Package daemon
 package daemon
 
 import (
@@ -124,10 +125,10 @@ func (d *Context) parent() (child *os.Process, err error) {
 
 func (d *Context) openFiles() (err error) {
 	if d.PidFilePerm == 0 {
-		d.PidFilePerm = FILE_PERM
+		d.PidFilePerm = FilePerm
 	}
 	if d.LogFilePerm == 0 {
-		d.LogFilePerm = FILE_PERM
+		d.LogFilePerm = FilePerm
 	}
 
 	if d.nullFile, err = os.Open(os.DevNull); err != nil {
@@ -195,7 +196,7 @@ func (d *Context) prepareEnv() (err error) {
 		d.Args = os.Args
 	}
 
-	mark := fmt.Sprintf("%s=%s", MARK_NAME, MARK_VALUE)
+	mark := fmt.Sprintf("%s=%s", MarkName, MarkValue)
 	if len(d.Env) == 0 {
 		d.Env = os.Environ()
 	}

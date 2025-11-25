@@ -76,7 +76,7 @@ func requireMinor(minor int) bool {
 		return true
 	}
 	str = strings.TrimPrefix(str, "go1.")
-	ver, err := strconv.ParseFloat(str, 10)
+	ver, err := strconv.ParseFloat(str, 32)
 	if err != nil {
 		return false
 	}
