@@ -16,14 +16,7 @@ and OSX, so that if you have an ability to test the library on other platforms, 
 
 ## Installation
 
-	go get github.com/sevlyar/go-daemon
-
-You can use [gopkg.in](http://labix.org/gopkg.in):
-
-	go get gopkg.in/sevlyar/go-daemon.v0
-
-If you want to use the library in production project, please use vendoring,
-because i can not ensure backward compatibility before release v1.0.
+    `go get github.com/gnuos/daemon@latest`
 
 ## Examples
 
