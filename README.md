@@ -1,6 +1,6 @@
-# go-daemon [![Build Status](https://travis-ci.org/sevlyar/go-daemon.svg?branch=master)](https://travis-ci.org/sevlyar/go-daemon) [![GoDoc](https://godoc.org/github.com/sevlyar/go-daemon?status.svg)](https://godoc.org/github.com/sevlyar/go-daemon)
+# daemon
 
-Library for writing system daemons in Go.
+Library for writing system daemons in Go. Fork from [go-daemon](https://github.com/sevlyar/go-daemon)
 
 Now supported only UNIX-based OS (Windows is not supported). But the library was tested only on Linux
 and OSX, so that if you have an ability to test the library on other platforms, give me feedback, please (#26).
@@ -16,7 +16,7 @@ and OSX, so that if you have an ability to test the library on other platforms, 
 
 ## Installation
 
-    `go get github.com/gnuos/daemon@latest`
+	go get github.com/gnuos/daemon@latest
 
 ## Examples
 
@@ -26,7 +26,7 @@ and OSX, so that if you have an ability to test the library on other platforms, 
 
 ## Documentation
 
-[godoc.org/github.com/sevlyar/go-daemon](https://godoc.org/github.com/sevlyar/go-daemon)
+[https://pkg.go.dev/github.com/gnuos/daemon](https://pkg.go.dev/github.com/gnuos/daemon)
 
 ## How it works
 
